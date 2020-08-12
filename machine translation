@@ -345,7 +345,7 @@ def plot_attention(attention, sentence, predicted_sentence):
 
   plt.show()
 
-kdef translate(sentence):
+def translate(sentence):
   result, sentence, attention_plot = evaluate(sentence)
 
   print('Input: %s' % (sentence))
@@ -357,9 +357,9 @@ kdef translate(sentence):
 checkpoint.restore(tf.train.latest_checkpoint(checkpoint_dir))
 translate(u'hace mucho frio aqui.')
 translate(u'esta es mi vida.')
-ktranslate(u'¿todavia estan en casa?')
+translate(u'¿todavia estan en casa?')
 # wrong translation
-mtranslate(u'trata de averiguarlo.')
+translate(u'trata de averiguarlo.')
   
   
 
